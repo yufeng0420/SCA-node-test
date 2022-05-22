@@ -23,8 +23,8 @@ async function getPayload(order) {
     })
 
     return {
-        title: title,
-        description: description,
+        title,
+        description,
         episodes
     }
 }
