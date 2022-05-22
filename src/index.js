@@ -7,7 +7,7 @@ app.get('/', async (req, res) => {
 
   const payload = await getPayload()
 
-  res.send(payload)
+  res.status(200).json(payload)
 })
 
 app.listen(port, () => {
