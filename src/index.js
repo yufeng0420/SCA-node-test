@@ -1,12 +1,13 @@
 const express = require('express')
-const getRSSFeed = require('./utilities/rss-parser')
+const getPayload = require('./utilities/get-payload')
 const app = express()
 const port = 3000
 
 app.get('/', async (req, res) => {
-  const test = await getRSSFeed("https://www.nasa.gov/rss/dyn/Houston-We-Have-a-Podcast.rss")
-  console.log({ test })
-  res.send(test)
+
+  const payload = await getPayload()
+
+  res.send(payload)
 })
 
 app.listen(port, () => {
