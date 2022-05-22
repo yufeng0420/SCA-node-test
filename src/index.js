@@ -10,6 +10,14 @@ app.get('/', async (req, res) => {
   res.status(200).json(payload)
 })
 
+app.get('/sort', async (req, res) => {
+
+  const { order } = req.query
+  const payload = await getPayload(order)
+
+  res.status(200).json(payload)
+})
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
