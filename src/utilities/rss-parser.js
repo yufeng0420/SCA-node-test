@@ -8,7 +8,7 @@ const parser = new RSSParser();
 function getRSSFeed(rss_url) {
     try {
         return parser.parseURL(rss_url);
-    } catch(error) {
+    } catch (error) {
         console.log('Error:', error.message)
     }
 }
